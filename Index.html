@@ -39,28 +39,28 @@
 </head>
 
 <body >
-  <header id="Home">
+  <header id="home">
       
     <div class="slideshow-container">
       <div class="nav-bar">
             <div class="logo"></div>
-            <div class="nav btn-group">
-                <a class="btn " href="#">Home</a>
+            <div class="nav btn-group ">
+                <a class="btn " href="#home">Home</a>
                 <a class="btn " href="#"><span class="spinner-grow spinner-grow-sm"></span>Products</a>
-                <a class="btn " href="#">Our Company</a>
-                <a class="btn " href="#">Media</a>
-                <a class="btn " href="#">Contact Us</a>
+                <a class="btn " href="#our-company">Our Company</a>
+                <a class="btn " href="#media">Media</a>
+                <a class="btn " href="#contact-us">Contact Us</a>
             </div>
-        </div>
-      <div>  
+        </div>  
     
-          <img class="mySlides fade img-fluid" src="img/1.jpg" style="width:100%">
-          <img class="mySlides fade img-fluid" src="img/2.jpg" style="width:100%">
-          <img class="mySlides fade img-fluid" src="img/3.jpg" style="width:100%">
-          <img class="mySlides fade img-fluid" src="img/4.jpg" style="width:100%">
-      </div>
+          <img class="mySlides  img-fluid" src="img/1.jpg" style="width:100%">
+          <img class="mySlides  img-fluid" src="img/2.jpg" style="width:100%">
+          <img class="mySlides  img-fluid" src="img/3.jpg" style="width:100%">
+          <img class="mySlides  img-fluid" src="img/4.jpg" style="width:100%">
         
-        <div class="store"> <a href="#">Online Store Coming Soon!</a> </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+<!--        <div class="store"> <a href="#">Online Store Coming Soon!</a> </div>-->
     </div>
     <br>
     </header>
@@ -69,18 +69,18 @@
                 <img src="img/3A-design.jpg" class="design" width="1441" height="511" style="">
     </div>
     <br>
-    <div class="our-company img-fluid">
+    <div id="our-company" class="our-company img-fluid">
           <h2 > Our Company</h2>
           <p class="about-company"> 3A. Design is a premium retail store offering complete wardrobe range solution to the descering man through its stylish range of Suits, Jackets, Shirts, Accessories and Casual wears. We also offer state of art Custom Tailoring servicees for anyone to "Look Good and Feel Great" <br> Custom Tailoring is the new way for you to get the exact ensembles you want with a unique bespoke experience, that is a class apert from traditional shopping. Our experienced stylish assists you in creating the look that you have in mind. Helps you select the right fabric, suggests styles and detailing. <i class="custom-tailoring"> 3A. Design offers Custom Tailoring of Shirts, Trousers and Suits using high quality standers.</i></p>
     </div>
     <br>
-    <div class="section-title text-center text-uppercase"><hr width="80%"><h2 class="n-arrival">Media</h2><hr width="80%">
+    <div id="media" class="section-title text-center text-uppercase"><hr width="80%"><h2 class="n-arrival">Media</h2><hr width="80%">
     <video src="vids/Pinterest.mp4" height="400" width="300" type="video/mp4" controls></video>
     <video src="vids/Pinterest_2.mp4" height="400" width="300" type="video/mp4" controls></video>
     </div>
     
     <footer class="bg-dark text-white img-fluid" style="margin-top: 1%;">
-    <div class="container">
+    <div id="contact-us" class="container">
         <div class="row">
             <div class="col-xs-12" >
                 <br><h5>Contact Info - Lahore</h5> Address : <br> Owner : IMRAN KHAN <br>
@@ -103,24 +103,24 @@
     
     
     <script>
-        
-        
-      var slideIndex = 0;
-      showSlides();
+        var slideIndex = 1;
+        showSlides(slideIndex);
 
-      function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
         }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 2500); // Change image every 5 seconds
-      }
-        
-        
+
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          slides[slideIndex-1].style.display = "block";  
+        }
     </script>
   
 
