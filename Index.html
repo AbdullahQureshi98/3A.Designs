@@ -9,19 +9,26 @@
     <link href="StyleSheet.css" rel="stylesheet">
     
   <!-- W3School -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+-->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-
-  <!-- Bootstrap -->
+<!--
+   Bootstrap 
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+-->
 
   <!-- Jquery -->
+<!--
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
+-->
 
   <!-- -->
   <!-- Extra Tags -->
@@ -41,18 +48,39 @@
 <body >
   <header id="home">
       
-    <div class="slideshow-container">
-      <div class="nav-bar">
-            <div class="logo"></div>
-            <div class="nav btn-group ">
-                <a class="btn " href="#home">Home</a>
-                <a class="btn " href="#"><span class="spinner-grow spinner-grow-sm"></span>Products</a>
-                <a class="btn " href="#our-company">Our Company</a>
-                <a class="btn " href="#media">Media</a>
-                <a class="btn " href="#contact-us">Contact Us</a>
+      <nav class="navbar navbar-fixed-top">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                  </button>
+                    <a class="navbar-brand" href="#home"><img class="img-fluid" src="img/card.jpg" style=" height:350%; width: 30%;"></a>  
+              </div>
+              
+              <div class="collapse navbar-collapse navg" id="myNavbar">
+              <ul class="nav navbar-nav na">
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li class="">
+                          <a class="" href="#">Products </a>
+                          <ul class="">
+                            <li><a  href="#">Suits</a></li>
+                            <li><a  href="#">Coats</a></li>
+                            <li><a  href="#">Dress-Shirts</a></li>
+                              <li><a  href="#">Dress-Pants</a></li>
+                          </ul>
+                    </li>
+                    <li><a class="" href="#our-company">Our Company</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+              </div>
             </div>
-        </div>  
-    
+        </nav>
+      
+    <div class="slideshow-container">
+          <img class="mySlides  img-fluid" src="img/0.jpg" style="width:100%">
           <img class="mySlides  img-fluid" src="img/1.jpg" style="width:100%">
           <img class="mySlides  img-fluid" src="img/2.jpg" style="width:100%">
           <img class="mySlides  img-fluid" src="img/3.jpg" style="width:100%">
@@ -69,17 +97,24 @@
                 <img src="img/3A-design.jpg" class="design" width="1441" height="511" style="">
     </div>
     <br>
+    
     <div id="our-company" class="our-company img-fluid">
+        <img class="image img-fluid" src="img/our-company1-1.jpg">
+        <div class="overlay">
+            <div class="our_company_text">
           <h2 > Our Company</h2>
-          <p class="about-company"> 3A. Design is a premium retail store offering complete wardrobe range solution to the descering man through its stylish range of Suits, Jackets, Shirts, Accessories and Casual wears. We also offer state of art Custom Tailoring servicees for anyone to "Look Good and Feel Great" <br> Custom Tailoring is the new way for you to get the exact ensembles you want with a unique bespoke experience, that is a class apert from traditional shopping. Our experienced stylish assists you in creating the look that you have in mind. Helps you select the right fabric, suggests styles and detailing. <i class="custom-tailoring"> 3A. Design offers Custom Tailoring of Shirts, Trousers and Suits using high quality standers.</i></p>
+          <p class="about-company"> 3A. Design is a premium retail store offering complete wardrobe range solution to the descerning man through its stylish range of Suits, Jackets, Shirts, Accessories and Casual wears. We also offer state of art Custom Tailoring services for anyone to "Look Good and Feel Great"</p>
+            </div>
+        </div>
     </div>
+    
     <br>
     <div id="media" class="section-title text-center text-uppercase"><hr width="80%"><h2 class="n-arrival">Media</h2><hr width="80%">
     <video src="vids/Pinterest.mp4" height="400" width="300" type="video/mp4" controls></video>
     <video src="vids/Pinterest_2.mp4" height="400" width="300" type="video/mp4" controls></video>
     </div>
     
-    <footer class="bg-dark text-white img-fluid" style="margin-top: 1%;">
+    <footer class="bg-text img-fluid" style="margin-top: 1%; color: white; background-color:black;">
     <div id="contact-us" class="container">
         <div class="row">
             <div class="col-xs-12" >
@@ -91,10 +126,10 @@
         
             <div class="" >
                 <p>&#169;2019 <a class="" href="#Home">3A.Designs Pakistan.</a> All Right Reserved-<a class="" href="#">Abdullah Qureshi</a>
-                <img class="img-fluid float-right" style="position: relative;" src="img/mastercard.png">
-                <img class="img-fluid float-right" style="position: relative;" src="img/paypal.jpg">
-                <img class="img-fluid float-right" style="position: relative;" src="img/american-express.png">
-                <img class="img-fluid float-right" style="position: relative;" src="img/visa.png">
+                <img class="img-fluid float-right" style="position: relative; float: right;" src="img/mastercard.png">
+                <img class="img-fluid float-right" style="position: relative; float: right;" src="img/paypal.jpg">
+                <img class="img-fluid float-right" style="position: relative; float: right;" src="img/american-express.png">
+                <img class="img-fluid float-right" style="position: relative; float: right;" src="img/visa.png">
                 </p>
             </div>
        
